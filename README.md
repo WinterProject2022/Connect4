@@ -1,2 +1,2 @@
 # Connect4
-This will be a repository that team members will push their individual code to our connect four game.
+It’s the classic game of connect four in the virtual space! play against friends or agaisnt our AI if you are feeling brave. 
