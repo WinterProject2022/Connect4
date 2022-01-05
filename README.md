@@ -3,3 +3,4 @@ It’s the classic game of connect four in the virtual space! play against frien
 
 - hello from nicks local computer! 
 - hello 
+- hello from michael!
