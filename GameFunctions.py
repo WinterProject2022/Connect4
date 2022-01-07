@@ -23,7 +23,20 @@ class GameFunctions():
             return(f"It's {self.player2} turn!")
         
     def playTile(self, column):
-        self.board.dropTile(column, Color(self.turn))
-        self.switch_turns()      
+        if(self.board.dropTile(column, Color(self.turn))):
+            win = [False]
+            if(self.checkWin()):
+                win = [True, self.getCurrentPlayer()]
+            self.switch_turns()
+            return win
+
+    def getCurrentPlayer(self):
+        if(self.turn < 0):
+            return self.player2
+        else:
+            return self.player1      
+
+    def checkWin(self):
+        return(self.board.checkRows() or self.board.checkColumns() or self.board.checkRightDiagonals() or self.board.checkLeftDiagonals())
 
     
