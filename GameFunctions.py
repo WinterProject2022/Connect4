@@ -3,9 +3,9 @@ from Board import Board
 
 class GameFunctions():
 
-    def __init__(self, player1, player2):
-        self.player1 = player1
-        self.player2 = player2
+    def __init__(self):
+        self.player1 = Color.RED
+        self.player2 = Color.YELLOW
         self.turn = -1
         self.board = Board()
         self.switch_turns()
@@ -16,11 +16,11 @@ class GameFunctions():
 
     def get_turn_message(self):
         if self.turn == 1:
-            print(f"It's {self.player1} turn!")
-            return(f"It's {self.player1} turn!")
+            print(f"It's {self.player1.name}'s turn!")
+            return(f"It's {self.player1.name}'s turn!")
         else:
-            print(f"It's {self.player2} turn!")
-            return(f"It's {self.player2} turn!")
+            print(f"It's {self.player2.name}'s turn!")
+            return(f"It's {self.player2.name}'s turn!")
         
     def playTile(self, column):
         if(self.board.dropTile(column, Color(self.turn))):
