@@ -1,6 +1,3 @@
-a = 5
-
-print(a)
 
 from Tile import Tile 
 from Color import Color
@@ -13,6 +10,8 @@ from GameFunctions import GameFunctions
 
 tile = Tile(Color.RED,2,3)
 print(tile)
+
+
 """ 
 def main():
     
